@@ -16,6 +16,13 @@
 		D6AC3D7B2808264E00B4FA1B /* RickAndMortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC3D7A2808264E00B4FA1B /* RickAndMortyTests.swift */; };
 		D6AC3D852808264E00B4FA1B /* RickAndMortyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC3D842808264E00B4FA1B /* RickAndMortyUITests.swift */; };
 		D6AC3D872808264E00B4FA1B /* RickAndMortyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC3D862808264E00B4FA1B /* RickAndMortyUITestsLaunchTests.swift */; };
+		D6AC3D982808299D00B4FA1B /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC3D962808299D00B4FA1B /* CustomTableViewCell.swift */; };
+		D6AC3D992808299D00B4FA1B /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6AC3D972808299D00B4FA1B /* CustomTableViewCell.xib */; };
+		D6AC3D9D280833C400B4FA1B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC3D9C280833C400B4FA1B /* Model.swift */; };
+		D6EE6FAF28083B2100FC8D83 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EE6FAE28083B2100FC8D83 /* NetworkService.swift */; };
+		D6EE6FB428098ADC00FC8D83 /* AllInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EE6FB328098ADC00FC8D83 /* AllInfoViewController.swift */; };
+		D6EE6FB62809B15B00FC8D83 /* ViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EE6FB52809B15B00FC8D83 /* ViewController+DataSource.swift */; };
+		D6EE6FB82809B1EA00FC8D83 /* ViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EE6FB72809B1EA00FC8D83 /* ViewController + TableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		D6AC3D802808264E00B4FA1B /* RickAndMortyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickAndMortyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6AC3D842808264E00B4FA1B /* RickAndMortyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyUITests.swift; sourceTree = "<group>"; };
 		D6AC3D862808264E00B4FA1B /* RickAndMortyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D6AC3D962808299D00B4FA1B /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		D6AC3D972808299D00B4FA1B /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		D6AC3D9C280833C400B4FA1B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D6EE6FAE28083B2100FC8D83 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		D6EE6FB328098ADC00FC8D83 /* AllInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllInfoViewController.swift; sourceTree = "<group>"; };
+		D6EE6FB52809B15B00FC8D83 /* ViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+DataSource.swift"; sourceTree = "<group>"; };
+		D6EE6FB72809B1EA00FC8D83 /* ViewController + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + TableViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +113,11 @@
 		D6AC3D622808264B00B4FA1B /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				D6EE6FB02808580B00FC8D83 /* API */,
 				D6AC3D632808264B00B4FA1B /* AppDelegate.swift */,
 				D6AC3D652808264B00B4FA1B /* SceneDelegate.swift */,
-				D6AC3D672808264B00B4FA1B /* ViewController.swift */,
+				D6EE6FB92809C24C00FC8D83 /* SecondViewController */,
+				D6AC3D952808285700B4FA1B /* FirstVIewController */,
 				D6AC3D692808264B00B4FA1B /* Main.storyboard */,
 				D6AC3D6C2808264D00B4FA1B /* Assets.xcassets */,
 				D6AC3D6E2808264D00B4FA1B /* LaunchScreen.storyboard */,
@@ -125,6 +141,43 @@
 				D6AC3D862808264E00B4FA1B /* RickAndMortyUITestsLaunchTests.swift */,
 			);
 			path = RickAndMortyUITests;
+			sourceTree = "<group>";
+		};
+		D6AC3D952808285700B4FA1B /* FirstVIewController */ = {
+			isa = PBXGroup;
+			children = (
+				D6AC3D9A280829A300B4FA1B /* CustomTVC */,
+				D6AC3D672808264B00B4FA1B /* ViewController.swift */,
+				D6EE6FB72809B1EA00FC8D83 /* ViewController + TableViewDelegate.swift */,
+				D6EE6FB52809B15B00FC8D83 /* ViewController+DataSource.swift */,
+			);
+			path = FirstVIewController;
+			sourceTree = "<group>";
+		};
+		D6AC3D9A280829A300B4FA1B /* CustomTVC */ = {
+			isa = PBXGroup;
+			children = (
+				D6AC3D962808299D00B4FA1B /* CustomTableViewCell.swift */,
+				D6AC3D972808299D00B4FA1B /* CustomTableViewCell.xib */,
+			);
+			path = CustomTVC;
+			sourceTree = "<group>";
+		};
+		D6EE6FB02808580B00FC8D83 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D6AC3D9C280833C400B4FA1B /* Model.swift */,
+				D6EE6FAE28083B2100FC8D83 /* NetworkService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		D6EE6FB92809C24C00FC8D83 /* SecondViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D6EE6FB328098ADC00FC8D83 /* AllInfoViewController.swift */,
+			);
+			path = SecondViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +286,7 @@
 			files = (
 				D6AC3D702808264D00B4FA1B /* LaunchScreen.storyboard in Resources */,
 				D6AC3D6D2808264D00B4FA1B /* Assets.xcassets in Resources */,
+				D6AC3D992808299D00B4FA1B /* CustomTableViewCell.xib in Resources */,
 				D6AC3D6B2808264B00B4FA1B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +312,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6EE6FB428098ADC00FC8D83 /* AllInfoViewController.swift in Sources */,
+				D6AC3D9D280833C400B4FA1B /* Model.swift in Sources */,
 				D6AC3D682808264B00B4FA1B /* ViewController.swift in Sources */,
 				D6AC3D642808264B00B4FA1B /* AppDelegate.swift in Sources */,
+				D6AC3D982808299D00B4FA1B /* CustomTableViewCell.swift in Sources */,
+				D6EE6FB82809B1EA00FC8D83 /* ViewController + TableViewDelegate.swift in Sources */,
+				D6EE6FAF28083B2100FC8D83 /* NetworkService.swift in Sources */,
 				D6AC3D662808264B00B4FA1B /* SceneDelegate.swift in Sources */,
+				D6EE6FB62809B15B00FC8D83 /* ViewController+DataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
