@@ -20,17 +20,17 @@ extension ViewController: UITableViewDataSource {
         return cell
     }
     
-     func configTableView() {
+    func configTableView() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil),
                            forCellReuseIdentifier: cell)
     }
     
-     func getInfo() {
-         ApiManager.shared.getInfo { [weak self] model in
-             self?.result = model.results
-             self?.pageInfo = model.info
+    func getInfo() {
+        ApiManager.shared.getInfo { [weak self] model in
+            self?.result = model.results
+            self?.pageInfo = model.info
         }
     }
 }

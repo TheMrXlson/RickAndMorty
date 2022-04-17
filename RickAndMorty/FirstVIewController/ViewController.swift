@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let cell = "cell"
+    let cell = "cell" //Reuse Identifier
     var result = [Result](){
         didSet {
             self.tableView.reloadData()
@@ -27,17 +27,18 @@ class ViewController: UIViewController {
         configTableView()
     }
     
+    // MARK: - Передача данных на AllInfoViewController с подробной информацией о выбранном персонаже
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "allInfo" else { return }
         guard let destination = segue.destination as? AllInfoViewController else { return }
         destination.result = selectedChar
     }
     
-    
+    // MARK: - Кнопки перехода между страницами с персонажами
     @IBAction func nextButton(_ sender: Any) {
-            guard let pageInfo = pageInfo else { return }
+        guard let pageInfo = pageInfo else { return }
         ApiManager.shared.baseUrl = pageInfo.next
-           getInfo()
+        getInfo()
     }
     
     @IBAction func prevButton(_ sender: Any) {

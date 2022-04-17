@@ -49,6 +49,4 @@ class AllInfoViewController: UIViewController {
         numberOfEpisode.text = String(result.episode.count)
     }
     
-    
-    
 }
