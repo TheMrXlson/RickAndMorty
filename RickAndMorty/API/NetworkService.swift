@@ -13,9 +13,9 @@ class ApiManager {
     var baseUrl = "https://rickandmortyapi.com/api/character"
     
     func getInfo(completion: @escaping (RickAndMorty) -> Void) {
-        var request = URLRequest(url: URL(string: self.baseUrl)!)
+        guard let url = URL(string: baseUrl) else { return }
+        var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data, let result = try? JSONDecoder().decode(RickAndMorty.self, from: data) {
                 DispatchQueue.main.async {
