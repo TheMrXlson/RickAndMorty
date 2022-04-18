@@ -14,14 +14,6 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var raceOfChar: UILabel!
     @IBOutlet weak var genderOfChar: UILabel!
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        avatar.image = nil
-        nameOfChar.text = nil
-        raceOfChar.text = nil
-        genderOfChar.text = nil
-    }
-    
     func configure(result: Result) {
         
         let url = URL(string:result.image)
@@ -29,14 +21,9 @@ class CustomTableViewCell: UITableViewCell {
         {
             avatar.image = UIImage(data: data)
         }
-        
         nameOfChar.text = result.name
         raceOfChar.text = result.species
         genderOfChar.text = result.gender
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
     }
     
 }

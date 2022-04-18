@@ -20,19 +20,10 @@ class AllInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        clear()
+        
         configure()
     }
     
-    private func clear() {
-        avatar.image = nil
-        name.text = nil
-        gender.text = nil
-        race.text = nil
-        status.text = nil
-        location.text = nil
-        numberOfEpisode.text = nil
-    }
     private func configure() {
         guard let result = result else { return }
         
